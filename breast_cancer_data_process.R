@@ -31,35 +31,6 @@ sample_process <- function(sample_name, sample_class, ID){
 
 
 ## ***************************************************
-
-# BC_1_tum_1_data <- sample_process("GSM3148591_BC01_TUMOR1_counts.csv", BC_1_tum_1, "BC_1_tum_1")
-# BC_1_tum_1_data <- read.csv("GSM3148631_BC06_TUMOR1_counts.csv",sep=",",row.names=1)
-# BC_1_tum_1_data <- apply(BC_1_tum_1_data ,2,function(x) replace(x,is.na(x),0))
-# head(BC_1_tum_1_data[1:5, 1:5])
-#
-# BC_1_tum_1_data <- Matrix(t(BC_1_tum_1_data))
-# BC_1_tum_1_data <- Matrix(BC_1_tum_1_data)
-# BC_1_tum_1_data <- CreateSeuratObject(raw.data=BC_1_tum_1_data)
-#
-# data.to.add <- rep("BC_1_tum_1",length=length(BC_1_tum_1_data@cell.names))
-# names(data.to.add) <- BC_1_tum_1_data@cell.names
-#
-# BC_1_tum_1_data <- AddMetaData(BC_1_tum_1_data,metadata=data.to.add,col.name="samples")
-# colnames(BC_1_tum_1_data@meta.data)
-# BC_1_tum_1_data@meta.data
-#
-# BC_1_tum_2 <- read.delim("GSM3148592_BC01_TUMOR2_counts.csv",sep=",", header=T)
-# head(BC_1_tum_2_data[1:5, 1:5])
-# dim(BC_1_tum_2_data)
-# BC_1_tum_2 <- BC_1_tum_2 %>% distinct(X,.keep_all = T)
-#
-# rownames(BC_1_tum_2) <- BC_1_tum_2$X
-# dups <- which(duplicated(BC_1_tum_2_data$X))
-# dups
-# length(unique(BC_1_tum_2_data[,1]))==length(BC_1_tum_2_data[,1])
-# length(unique(BC_1_tum_2_data[,1]))
-
-## ******
 ## BC_1
 
 BC_1_tum_1_data <- sample_process("GSM3148591_BC01_TUMOR1_counts.csv",BC_1_tum_1, "BC_1_tum_1" )
