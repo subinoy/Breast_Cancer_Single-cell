@@ -1,6 +1,7 @@
+## Author: Subinoy Biswas
 ## Load Seurat library
 library(Seurat)
-## Load other libraries needed fr Seurat
+## Load other libraries needed for Seurat
 library(dplyr)
 library(Matrix)
 library(ggpubr)
@@ -71,11 +72,10 @@ levels(TILs_PBMC_HD_pbl@ident)
 TSNEPlot(object = TILs_PBMC_HD_pbl, do.label = TRUE)
 
 
-# First lets stash our identities for later
+
 TILs_PBMC_HD_pbl <- StashIdent(object = TILs_PBMC_HD_pbl, save.name = "ClusterNames_0.5")
 
-# Note that if you set save.snn=T above, you don't need to recalculate the SNN, and can simply put:
-# pbmc <- FindClusters(pbmc,resolution = 0.8)
+
 TILs_PBMC_HD_pbl <- FindClusters(object = TILs_PBMC_HD_pbl, reduction.type = "pca", dims.use = 1:10, print.output = FALSE)
 
 
@@ -86,7 +86,7 @@ FeaturePlot(object = TILs_PBMC_HD_pbl, features.plot = c("IL7R","CD4", "CD3D","C
             ,nCol = 4,reduction.use = "tsne")
 
 
-# Demonstration of how to plot two tSNE plots side by side, and how to color points based on different criteria
+#
 
 my_TILs_PBMC <- grep("TILs_PBMC", row.names(TILs_PBMC_HD_pbl@meta.data), value = TRUE)
 my_HD_pbl <- grep("HD_pbl", row.names(TILs_PBMC_HD_pbl@meta.data), value = TRUE)
@@ -100,13 +100,12 @@ plot_grid(
 
 
 
-# find markers for every cluster compared to all remaining cells, report
-# only the positive ones
+
 TILs_PBMC_HD_pbl.markers <- FindAllMarkers(object = TILs_PBMC_HD_pbl, only.pos = TRUE, min.pct = 0.25,
                                        thresh.use = 0.25)
 
 write.csv(TILs_PBMC_HD_pbl.markers, file="TILs_PBMC_HD_pbl.markers.csv")
-#TIL_M899.markers %>% group_by(cluster) %>% top_n(2, avg_logFC)
+
 
 TILs_PBMC_HD_pbl.markers_20 <-TILs_PBMC_HD_pbl.markers  %>% group_by(cluster) %>% top_n(20, avg_logFC)
 
