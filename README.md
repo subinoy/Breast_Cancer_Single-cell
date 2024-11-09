@@ -7,7 +7,7 @@ Overview:   Single-cell RNA sequencing provides valuable insights into the diver
 ### Repository Structure 
 
 - data:   Contains sample data and metadata used in this analysis (or instructions to access large datasets). 
-- src:   Contain scripts for data processing, clustering, differential expression analysis, and visualization.
+- src:   Contains scripts for data processing, clustering, differential expression analysis, and visualization.
 - notebooks:   Jupyter notebooks detailing each step of the analysis pipeline.
 - results:   Output results such as plots, tables, and processed datasets.
 
