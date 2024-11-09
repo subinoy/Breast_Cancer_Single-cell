@@ -4,7 +4,7 @@ This repository contains code and data for analyzing single-cell RNA sequencing 
 
 Overview: Single-cell RNA sequencing provides valuable insights into the diverse cell populations in breast cancer tissues. By analyzing this data, we can identify cell subtypes, study gene expression variability, and gain insights into tumor microenvironments that are crucial for developing targeted cancer therapies. This repository includes pre-processing, clustering, visualization, and analysis steps for breast cancer scRNA-seq data.
 
-Repository Structure 
+### Repository Structure 
 
 - data: Contains sample data and metadata used in this analysis (or instructions to access large datasets). 
 - src: Src contain scripts for data processing, clustering, differential expression analysis, and visualization.
