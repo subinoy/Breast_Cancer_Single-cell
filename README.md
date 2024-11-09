@@ -4,12 +4,17 @@ This repository contains code and data for analyzing single-cell RNA sequencing 
 
 Overview: Single-cell RNA sequencing provides valuable insights into the diverse cell populations in breast cancer tissues. By analyzing this data, we can identify cell subtypes, study gene expression variability, and gain insights into tumor microenvironments that are crucial for developing targeted cancer therapies. This repository includes pre-processing, clustering, visualization, and analysis steps for breast cancer scRNA-seq data.
 
-Repository Structure data: Contains sample data and metadata used in this analysis (or instructions to access large datasets). scripts: Scripts for data processing, clustering, differential expression analysis, and visualization. notebooks: Jupyter notebooks detailing each step of the analysis pipeline. results: Output results such as plots, tables, and processed datasets.
+Repository Structure 
 
-Key Features Data Preprocessing: Scripts for quality control, normalization, and scaling of raw scRNA-seq data.
+- data: Contains sample data and metadata used in this analysis (or instructions to access large datasets). 
+- scripts: Scripts for data processing, clustering, differential expression analysis, and visualization.
+- notebooks: Jupyter notebooks detailing each step of the analysis pipeline.
+- results: Output results such as plots, tables, and processed datasets.
 
-Clustering and Visualization: Code for clustering cells, generating UMAP or t-SNE plots, and visualizing gene expression.
+* Key Features Data Preprocessing: Scripts for quality control, normalization, and scaling of raw scRNA-seq data.
 
-Differential Expression Analysis: Identifies marker genes and differential expression between clusters.
+* Clustering and Visualization: Code for clustering cells, generating UMAP or t-SNE plots, and visualizing gene expression.
 
-Biomarker Discovery: Tools to identify potential biomarkers specific to cell populations in breast cancer.
+* Differential Expression Analysis: Identifies marker genes and differential expression between clusters.
+
+* Biomarker Discovery: Tools to identify potential biomarkers specific to cell populations in breast cancer.
