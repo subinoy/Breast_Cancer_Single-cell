@@ -1,4 +1,5 @@
-## Breast Cancer Single-cell Analysis   https://img.shields.io/badge/Seurat-Version-2.3.4-green
+## Breast Cancer Single-cell Analysis   ![Static Badge](https://img.shields.io/badge/Seurat-version_2.3.4-green)
+
 
 This repository contains code and data for analyzing single-cell RNA sequencing (scRNA-seq) data in breast cancer. The goal of this project is to explore and identify cellular heterogeneity, gene expression patterns, and potential biomarkers within breast cancer samples at a single-cell resolution.
 
