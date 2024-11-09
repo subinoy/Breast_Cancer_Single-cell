@@ -11,7 +11,7 @@ Repository Structure
 - notebooks: Jupyter notebooks detailing each step of the analysis pipeline.
 - results: Output results such as plots, tables, and processed datasets.
 
-** Key Features Data Preprocessing: Scripts for quality control, normalization, and scaling of raw scRNA-seq data.
+* Key Features Data Preprocessing: Scripts for quality control, normalization, and scaling of raw scRNA-seq data.
 
 * Clustering and Visualization: Code for clustering cells, generating UMAP or t-SNE plots, and visualizing gene expression.
 
