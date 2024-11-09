@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Set R_LIBS to point to the correct library directory within the conda environment
+export R_LIBS="${CONDA_PREFIX}/lib/R/packages"
+
+# Create the R library directory if it does not exist
+mkdir -p "${R_LIBS}"
+
+# Install Seurat if it is not already installed
+#Rscript -e "if (!requireNamespace('Seurat', quietly = TRUE)) install.packages('Seurat', #repos = 'http://cran.us.r-project.org')"
+
+# Install Jupyter and IRkernel if not already installed
+#conda install -y -c conda-forge jupyter r-irkernel
+#conda install -y conda-forge r-seurat
+
+# Register R kernel with Jupyter
+Rscript -e "IRkernel::installspec(name = 'seurat', displayname = 'R (seurat)')"
+

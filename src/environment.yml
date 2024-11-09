@@ -1,0 +1,29 @@
+name: seurat
+channels:
+  - conda-forge
+  - r
+  - bioconda
+  - defaults
+dependencies:
+  - r-base=4.4
+  - r-essentials
+  - r-devtools
+  - r-remotes                # To use remotes::install_version()
+  - jupyter                  # Ensure Jupyter is installed
+  - r-irkernel               # Install R kernel for Jupyter
+  - r-rcurl                  # Needed for installing Seurat dependencies
+  - r-matrix
+  - r-mass
+  - r-lattice
+  - r-scales
+  - r-sp
+  - r-lars
+  - r-tsne
+  - r-fpc
+  - r-hmisc
+  - r-metap
+  - r-cluster
+  - r-png
+  - r-dosnow
+  - r-foreach
+

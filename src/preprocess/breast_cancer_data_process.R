@@ -6,7 +6,7 @@ library(dplyr)
 library(gplots)
 library(RColorBrewer)
 ## -------------------------------------
-## Function to read and create Seurat object
+## Function to read tab delimited Single-cell file and create Seurat object
 sample_process <- function(sample_name, sample_class, ID){
  # sample_class <- read.csv(sample_name, sep = ",", row.names = 1)
   sample_class <- read.delim(sample_name, sep=",", header=T)
@@ -390,13 +390,15 @@ tail(BC_9_1_2@meta.data)
 saveRDS(BC_9_1_2, file="BC_9_1_2.rds")
 tail(BC_9_1_2@meta.data)
 
-# ____----------------
+# -----------------------
+## Individual Breast Cancer Tumor Samples
 BC_1_tum_123_4
 BC_2_tum_123_4
 BC_4_tum_1235_6
 BC_6_tum_12_3
 BC_9_1_2
 
+## Merging Seurat object of individual Tumor into a merged one
 BC_1_BC_2 <- MergeSeurat(object1 = BC_1_tum_123_4,
                         object2 = BC_2_tum_123_4,
                         min.cells = 3,
@@ -441,6 +443,7 @@ BC_124_6_BC_9<- MergeSeurat(object1 = BC_12_4_BC_6,
 BC_124_6_BC_9
 #27911 genes across 29467 samples
 
+## Saving Merged Breast Cancer Seurat object for future uses
 saveRDS(BC_124_6_BC_9, file="BC_124_6_BC_9.rds")
 head(BC_124_6_BC_9@meta.data)
 tail(BC_124_6_BC_9@meta.data)
@@ -451,3 +454,4 @@ table(samplename_all)
 # 326        172        278       1072        663        616        912        246       1165       2237
 # BC_4_tum_3 BC_4_tum_5 BC_4_tum_6 BC_6_tum_1 BC_6_tum_2 BC_6_tum_3 BC_9_tum_1 BC_9_tum_2
 # 1496       1830       1593        135        194       2547       7096       6889
+## ==============================================================================================================

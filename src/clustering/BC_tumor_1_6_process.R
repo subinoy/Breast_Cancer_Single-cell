@@ -1,4 +1,4 @@
-## Author: Subinoy Biswas
+ ## Author: Subinoy Biswas
 library(Seurat)         ## Version 3
 library(Matrix)
 library(dplyr)
@@ -9,7 +9,7 @@ library(sctransform)
 library(Cairo)
 
 
-set.seed(123)
+set.seed(123)                                                               # Setting seed value for reproducibility
 BC_tum_1246 <- readRDS("Aug_7_integration/BC_12_4_BC_6_aug_190807.rds")
 BC_tum_1246_new <-UpdateSeuratObject(BC_tum_1246)
 
@@ -53,7 +53,7 @@ head(BC_tum_1246@meta.data$samples)
 tail(rownames(BC_tum_1246@meta.data))
 tail(BC_tum_1246@meta.data)
 
-DimPlot(BC_tum_1246, label = TRUE)    # + NoLegend()
+DimPlot(BC_tum_1246, label = TRUE)    # NoLegend
 
 BC_tum_1246 <- FindNeighbors(BC_tum_1246, dims = 1:10, verbose = FALSE)
 
@@ -102,13 +102,12 @@ FeaturePlot(BC_tum_1246, features = c("IL7R", "LTB", "LDHB", "NOSIP",
                                        "TCF7", "RPS12" ), pt.size = 0.2, reduction = "tsne", ncol = 3)
 
 dev.off()
-# 3
 
+# 3
 jpeg("tum_6_Aug_9/Cluster_cd4.treg.jpg", height = 8, width =12, units = 'in', res= 300)
 FeaturePlot(BC_tum_1246, features = c("TNFRSF4", "TNFRSF18", "IL2RA", "CTLA4",
                                        "AC133644.2", "BATF", "IL32", "ICOS",
                                        "ISG15", "IFI6" ), pt.size = 0.2, reduction = "tsne", ncol = 3)
-
 
 dev.off()
 # 4
@@ -117,8 +116,6 @@ jpeg("tum_6_Aug_9/Cluster_cd8.cells.jpg", height = 8, width =12, units = 'in', r
 FeaturePlot(BC_tum_1246, features = c("CCL5", "GZMA", "GZMK", "CCL4",
                                        "CXCL13", "CD8A", "GZMB", "CCL4L2",
                                        "GZMH", "AC092580.4" ), pt.size = 0.2,reduction = "tsne", ncol = 3)
-
-
 
 dev.off()
 
@@ -129,8 +126,6 @@ FeaturePlot(BC_tum_1246, features = c("S100A9", "S100A8", "LYZ", "S100A12",
                                        "RP11-1143G9.4", "CXCL8", "VCAN", "SPP1",
                                        "IL1B", "CD14" ), pt.size = 0.2,reduction = "tsne", ncol = 3)
 
-
-
 dev.off()
 
 # 6
@@ -140,9 +135,7 @@ FeaturePlot(BC_tum_1246, features = c("LST1", "AIF1", "FCGR3A", "IFITM3",
                                        "CFD", "SERPINA1", "CST3", "FCER1G",
                                        "MS4A7", "LINC01272" ), pt.size = 0.2,reduction = "tsne", ncol = 3)
 
-
 dev.off()
-
 
 
 # 7
@@ -150,9 +143,7 @@ jpeg("tum_6_Aug_9/markers_dc.cells.jpg", height = 8, width =12, units = 'in', re
 
 FeaturePlot(BC_tum_1246, features = c("CST3","HLA-DPB1","HLA-DPA1","HLA-DRA","HLA-DQA1",
                                       "HLA-DRB1","HLA-DQB1","HLA-DRB5","TXN","CD74"),
-            pt.size = 0.2,reduction = "tsne", ncol = 3)
-
-
+                                        pt.size = 0.2,reduction = "tsne", ncol = 3)
 
 dev.off()
 
@@ -170,10 +161,9 @@ FeaturePlot(BC_tum_1246, features = c("TPSAB1",
                                        "CD9",
                                        "HPGD",
                                        "AREG"
-), pt.size = 0.2, reduction = "tsne", ncol = 3)
+                                    ), pt.size = 0.2, reduction = "tsne", ncol = 3)
 
 dev.off()
-
 
 
 # 9
@@ -189,8 +179,7 @@ FeaturePlot(BC_tum_1246, features = c("FGFBP2",
                                        "KLRB1",
                                        "CTSW",
                                        "CLIC3"
-), pt.size = 0.2, reduction = "tsne", ncol = 3)
-
+                                    ), pt.size = 0.2, reduction = "tsne", ncol = 3)
 
 dev.off()
 
@@ -208,7 +197,6 @@ FeaturePlot(BC_tum_1246, features = c("PTGDS",
                                        "ITM2C",
                                        "PPP1R14B",
                                        "SERPINF1"
-), pt.size = 0.2, reduction = "tsne", ncol = 3)
-
+                                    ), pt.size = 0.2, reduction = "tsne", ncol = 3)
 
 dev.off()
