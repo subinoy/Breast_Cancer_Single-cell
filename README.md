@@ -11,6 +11,9 @@ This repository contains code and data for analyzing single-cell RNA sequencing 
 - **notebooks:**   Jupyter notebooks detailing each step of the analysis pipeline.
 - **results:**   Output results such as plots, tables, and processed datasets.
 
+![Project Screenshot](/Users/sunmqtp2/Desktop/Screenshot 2024-11-10 at 02.00.32.png)
+
+
 ### Key Features
 
 - **Data Preprocessing:** Scripts for quality control, normalization, and scaling of raw scRNA-seq data.
