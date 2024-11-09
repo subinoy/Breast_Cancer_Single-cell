@@ -1,0 +1,36 @@
+Breast_Cancer_Single-cell/
+.
+├── README.md
+├── data
+│   └── data_source.txt
+├── notebooks
+├── results
+│   ├── plots
+│   │   ├── Heatmap_cluster_17.jpeg
+│   │   ├── markers_b_cells.jpg
+│   │   ├── markers_cd14.cells.jpg
+│   │   ├── markers_cd16.cells.jpg
+│   │   ├── markers_cd4.tconv.jpg
+│   │   ├── markers_cd4.treg.jpg
+│   │   ├── markers_cd8.cells.jpg
+│   │   ├── markers_dc.cells.jpg
+│   │   ├── markers_mast.cells.jpg
+│   │   ├── markers_nk.cells.jpg
+│   │   ├── markers_pdc.cells.jpg
+│   │   ├── tSNE_cluster_17.jpeg
+│   │   ├── tSNE_cluster_tumor_wise.jpeg
+│   │   └── umap_plot_tumor_wise.jpeg
+│   └── tables
+│       ├── BC_tum_12469_clusters_Top_10_genes.csv
+│       └── BC_tum_all_markers_clust_17.csv
+└── src
+    ├── clustering
+    │   ├── BC_tumor_1_6_process.R
+    │   └── cluster_BC9.R
+    ├── environment.yml
+    ├── postBuild
+    ├── preprocess
+    │   └── breast_cancer_data_process.R
+    └── setup_seurat.sh
+
+9 directories, 24 files
