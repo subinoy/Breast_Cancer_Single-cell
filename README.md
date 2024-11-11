@@ -12,7 +12,8 @@ This repository contains code and data for analyzing single-cell RNA sequencing 
 - **notebooks:**   Jupyter notebooks detailing each step of the analysis pipeline.
 - **results:**   Output results such as plots, tables, and processed datasets.
 
-![Alt text](/data/BR_repo_tree.png?raw=true "Repo tree")
+
+<img src="/data/BR_repo_tree.png" width="500" height="600" />
 
 
 ### Key Features
